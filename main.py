@@ -173,18 +173,6 @@ def run():
 
 		if writer is not None:
 		   writer.write(frame)
-
-		# ghi lại quá trình đếm
-		if config.Log:
-			datetimee = [datetime.datetime.now()]
-			d = [datetimee, empty1, empty, x]
-			export_data = zip_longest(*d, fillvalue = '')
-
-			with open('Log.csv', 'w', newline='') as myfile:
-				wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-				wr.writerow(("End Time", "In", "Out", "Total Inside"))
-				wr.writerows(export_data)
-
 		cv2.imshow("Video", frame)
 		key = cv2.waitKey(1) & 0xFF
 		if key == ord("q"):
