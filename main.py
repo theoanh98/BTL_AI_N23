@@ -6,9 +6,7 @@ from mylib import config, thread
 import time, schedule, csv
 import numpy as np
 import argparse, imutils
-
 import time, dlib, cv2, datetime
-from itertools import zip_longest
 t0 = time.time()
 def run():
 	ap = argparse.ArgumentParser()
